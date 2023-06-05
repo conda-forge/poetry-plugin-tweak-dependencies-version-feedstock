@@ -1,4 +1,4 @@
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: poetry-plugin-tweak-dependencies-version
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/poetry-plugin-tweak-dependencies-version/poetry_plugin_tweak_dependencies_version-{{ version }}.tar.gz
-  sha256: 8eb97f1e772d4d99e6e0f0b794ba75150583f8abd91350df8fe46077381123f0
+  sha256: fecf4195f88fe049e78ea31ef3ed8624d6051378f865c37cacc7fcd9e93a6628
 
 build:
   noarch: python
