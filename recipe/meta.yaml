@@ -1,23 +1,23 @@
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: poetry-plugin-tweak-dependencies-version
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/poetry-plugin-tweak-dependencies-version/poetry_plugin_tweak_dependencies_version-{{ version }}.tar.gz
-  sha256: 4e0be2b8e23a04e542c5090deb5b6e191750ec45bace98ea8b55150844c6026b
+  url: https://files.pythonhosted.org/packages/py3/p/poetry-plugin-tweak-dependencies-version/poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
+  sha256: 1daad5cf7e1e382c29316c512319b7da7264bffa1dd871fa9b9b2547a91f9441
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  script:
+    - {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
+    - {{ PYTHON }} -c "__import__('zipfile').ZipFile('poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl').extractall()"
+  number: 0
 
 requirements:
   host:
     - python >=3.9
-    - poetry-core >=1.0.0
-    - poetry-dynamic-versioning
     - pip
   run:
     - python >=3.9,<3.12
@@ -35,7 +35,7 @@ about:
   home: https://github.com/sbrunner/poetry-plugin-tweak-dependencies-version
   summary: Poetry plugin used to tweak dependency versions
   license: BSD-2-Clause
-  license_file: LICENSE
+  license_file: poetry_plugin_tweak_dependencies_version-{{ version }}.dist-info/LICENSE
 
 extra:
   recipe-maintainers:
