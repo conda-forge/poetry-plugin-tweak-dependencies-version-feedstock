@@ -10,7 +10,9 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
+  script:
+    - {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
+    - {{ PYTHON }} -c "__import__('zipfile').ZipFile('poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl').extractall()"
   number: 0
 
 requirements:
@@ -33,7 +35,7 @@ about:
   home: https://github.com/sbrunner/poetry-plugin-tweak-dependencies-version
   summary: Poetry plugin used to tweak dependency versions
   license: BSD-2-Clause
-  license_file: LICENSE
+  license_file: poetry_plugin_tweak_dependencies_version-{{ version }}.dist-info/LICENSE
 
 extra:
   recipe-maintainers:
