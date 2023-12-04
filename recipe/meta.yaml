@@ -5,20 +5,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/poetry-plugin-tweak-dependencies-version/poetry_plugin_tweak_dependencies_version-{{ version }}.tar.gz
-  sha256: da98453734308a6e6bbfad106d4ecce31377abba88d1731c43904a5a97f28df3
+  url: https://files.pythonhosted.org/packages/py3/p/poetry-plugin-tweak-dependencies-version/poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
+  sha256: 1daad5cf7e1e382c29316c512319b7da7264bffa1dd871fa9b9b2547a91f9441
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
   number: 0
 
 requirements:
   host:
     - python >=3.9
-    - poetry-core >=1.0.0
-    - poetry-dynamic-versioning
-    - poetry-plugin-tweak-dependencies-version
     - pip
   run:
     - python >=3.9,<3.12
