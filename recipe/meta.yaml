@@ -9,18 +9,19 @@ source:
   sha256: 1daad5cf7e1e382c29316c512319b7da7264bffa1dd871fa9b9b2547a91f9441
 
 build:
+  number: 1
   noarch: python
   script:
     - {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
     - {{ PYTHON }} -c "__import__('zipfile').ZipFile('poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl').extractall()"
-  number: 0
 
 requirements:
   host:
-    - python >=3.9
     - pip
+    - poetry-core
+    - python {{ python_min }}
   run:
-    - python >=3.9,<3.12
+    - python >={{ python_min }},<3.12
     - poetry >=1.6,<1.7
 
 test:
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/sbrunner/poetry-plugin-tweak-dependencies-version
