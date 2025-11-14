@@ -3,7 +3,8 @@ schema_version: 1
 
 context:
   version: "1.5.5"
-  python_check_max: "3.14"
+  # dulwich not yet available for 3.14
+  python_check_max: "3.13"
   name: poetry-plugin-tweak-dependencies-version
   mod: ${{ name | replace("-", "_") }}
 
