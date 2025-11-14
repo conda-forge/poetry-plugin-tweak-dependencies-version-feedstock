@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.5.4" %}
 
 package:
   name: poetry-plugin-tweak-dependencies-version
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/p/poetry-plugin-tweak-dependencies-version/poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
-  sha256: 1daad5cf7e1e382c29316c512319b7da7264bffa1dd871fa9b9b2547a91f9441
+  sha256: 7b73c662fa252ce9b7b9606b2d53e2e70be01e6bdd45396da463455216c6e4c6
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation poetry_plugin_tweak_dependencies_version-{{ version }}-py3-none-any.whl
