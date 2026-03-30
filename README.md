@@ -3,21 +3,22 @@ About poetry-plugin-tweak-dependencies-version-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/poetry-plugin-tweak-dependencies-version-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/sbrunner/poetry-plugin-tweak-dependencies-version
+Home: https://pypi.org/project/poetry-plugin-tweak-dependencies-version
 
 Package license: BSD-2-Clause
 
 Summary: Poetry plugin used to tweak dependency versions
 
+Development: https://github.com/sbrunner/poetry-plugin-tweak-dependencies-version
+
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18912&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/poetry-plugin-tweak-dependencies-version-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>

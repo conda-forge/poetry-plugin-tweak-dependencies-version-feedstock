@@ -2,11 +2,11 @@
 schema_version: 1
 
 context:
-  version: "1.5.5"
-  # dulwich not yet available for 3.14
-  python_check_max: "3.13"
+  version: "1.5.6"
   name: poetry-plugin-tweak-dependencies-version
   mod: ${{ name | replace("-", "_") }}
+  # dulwich not yet available for 3.14
+  python_check_max: "3.13"
 
 package:
   name: ${{ name }}
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/p/${{ name }}/${{ mod }}-${{ version }}-py3-none-any.whl
-  sha256: 12eed265883bd3556e9de843d370dc07b0db3f95d00c4a923d01ba8c9044fae3
+  sha256: b0bb812b6d47e6ddf0673e9d0cdd24f4fdf5bd75ca7b00dd21e73164e45706c1
 
 build:
   number: 0
@@ -44,7 +44,8 @@ about:
   summary: Poetry plugin used to tweak dependency versions
   license: BSD-2-Clause
   license_file: ${{ mod }}-${{ version }}.dist-info/LICENSE
-  homepage: https://github.com/sbrunner/${{ name }}
+  homepage: https://pypi.org/project/poetry-plugin-tweak-dependencies-version
+  repository: https://github.com/sbrunner/${{ name }}
 
 extra:
   recipe-maintainers:
