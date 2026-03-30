@@ -6,7 +6,7 @@ context:
   name: poetry-plugin-tweak-dependencies-version
   mod: ${{ name | replace("-", "_") }}
   # dulwich not yet available for 3.14
-  python_check_max: "3.14"
+  python_check_max: "3.13"
 
 package:
   name: ${{ name }}
