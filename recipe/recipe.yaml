@@ -29,8 +29,15 @@ requirements:
     - poetry-core
     - python ${{ python_min }}.*
   run:
+    - cryptoography
+    - idna
+    - poetry <2.1.0
     - python >=${{ python_min }}
-    - poetry >=1.6,<2.1
+    - urllib3
+    - certifi
+    - requests
+    - filelock
+    - virtualenv
 
 tests:
   - python:
