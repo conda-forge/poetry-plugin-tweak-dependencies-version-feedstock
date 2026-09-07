@@ -29,7 +29,7 @@ requirements:
     - poetry-core
     - python ${{ python_min }}.*
   run:
-    - cryptoography
+    - cryptography
     - idna
     - poetry <2.1.0
     - python >=${{ python_min }}
