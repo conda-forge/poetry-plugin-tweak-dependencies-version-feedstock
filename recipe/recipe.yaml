@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.5.6"
+  version: "1.5.7"
   name: poetry-plugin-tweak-dependencies-version
   mod: ${{ name | replace("-", "_") }}
   # dulwich not yet available for 3.14
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/py3/p/${{ name }}/${{ mod }}-${{ version }}-py3-none-any.whl
-  sha256: b0bb812b6d47e6ddf0673e9d0cdd24f4fdf5bd75ca7b00dd21e73164e45706c1
+  sha256: c4193e50308da7d75cae3141ad68b03755fef4d4e29d8629a8fdf2cd890069db
 
 build:
   number: 0
